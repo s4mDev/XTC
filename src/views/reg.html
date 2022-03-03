@@ -24,19 +24,67 @@
         </a>
         <form action="" class="login__form">
             <div class="login__form-title">
-                Вход
+                Регистрация
             </div>
             <div class="login__form-group">
                 <div class="login__form-label">
                     Email
                 </div>
-                <input type="text" class="login__form-control">
+                <input type="email" class="login__form-control" placeholder="ex. expample@mail.com">
             </div>
             <div class="login__form-group">
                 <div class="login__form-label">
                     Пароль
                 </div>
-                <input type="password" class="login__form-control">
+                <input type="password" class="login__form-control" placeholder="Введите пароль">
+            </div>
+            <div class="login__form-group">
+                <div class="login__form-label">
+                    Пароль ещё раз
+                </div>
+                <input type="password" class="login__form-control" placeholder="Пароль ещё раз">
+            </div>
+            <div class="login__form-group">
+                <div class="login__form-label">
+                    Имя
+                </div>
+                <input type="text" class="login__form-control" placeholder="Иван">
+            </div>
+            <div class="login__form-group">
+                <div class="login__form-label">
+                    Фамилия
+                </div>
+                <input type="text" class="login__form-control" placeholder="Иванов">
+            </div>
+            <div class="login__form-group">
+                <div class="login__form-label">
+                    Дата рождения
+                </div>
+                <input type="text" class="login__form-control" pattern="^\d{4}-\d{2}-\d{2}$" placeholder="хх.хх.хххх">
+            </div>
+            <div class="login__form-group">
+                <div class="login__form-label">
+                    Номер телефона
+                </div>
+                <input type="text" class="login__form-control" placeholder="+7 (___) ___-__-__">
+            </div>
+            <div class="login__form-group">
+                <div class="login__form-label">
+                    Telegram
+                </div>
+                <input type="text" class="login__form-control" placeholder="@username">
+            </div>
+            <div class="login__form-group">
+                <div class="login__form-label">
+                    USDT
+                </div>
+                <input type="text" placeholder="USDT TRC20" class="login__form-control">
+            </div>
+            <div class="login__form-group">
+                <div class="login__form-label">
+                    Ваше устройство
+                </div>
+                <input type="text" class="login__form-control" placeholder="MacBook Air, iPhone 11">
             </div>
             <div class="login__form-group login__form-group_captcha">
                 <img src="<%=require('@img/rob1_1.jpg') %>" alt="">
@@ -45,7 +93,7 @@
                 <button type="submit" class="login__form-submit">
                     Войти
                 </button>
-                <span class="login__form-forget">Забыли пароль?</span>
+                <a href="" class="login__form-forget">Уже есть аккаунт?</a>
             </div>
         </form>
     </section>

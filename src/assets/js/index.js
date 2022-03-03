@@ -1,4 +1,5 @@
 import '../scss/main.scss';
+import 'jquery-nice-select';
 
 $('.sidebar__user-header').click(function () {
     $(this).parent('.sidebar__user').toggleClass('sidebar__user_open');
@@ -19,4 +20,18 @@ $('.burger').click(function () {
 $('#selection_all').change(function () {
     var checkboxes = $('.select-tr');
     checkboxes.prop('checked', $(this).is(':checked'));
+});
+
+$('select').niceSelect();
+
+$('.login__form-forget').click(function () {
+    $('body').addClass('call-open');
+});
+
+$('.modal-password__button').click(function () {
+    $('body').removeClass('call-open');
+});
+
+$('.backdrop').click(function () {
+    $('body').removeClass('call-open');
 });

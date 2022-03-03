@@ -1,3 +1,59 @@
 .footer {
     background-color: transparent;
 }
+
+.modal-password {
+    position: fixed;
+    width: 500px;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    left: -300vw;
+    opacity: 0;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 11;
+    text-align: center;
+    padding: 40px 20px;
+    transition: .5s opacity;
+    &__txt {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        font-weight: 500;
+    }
+    &__button {
+        background: #56AE83;
+        border-radius: 5px;
+        width: 150px;
+        height: 60px;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+        transition: .3s all;
+        &:hover {
+            background: #47916d;
+        }
+    }
+}
+
+.backdrop {
+    position: fixed;
+    left: -300vw;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.301);
+}
+
+.call-open {
+    .backdrop {
+        left: 0;
+    }
+    .modal-password {
+        left: 50%;
+        opacity: 1;
+    }
+}
